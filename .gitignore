@@ -1,0 +1,8 @@
+.env
+token.json
+credentials.json
+__pycache__/
+*.pyc
+*.log
+Meeting_Minutes_*.md
+temp_audio.ogg
