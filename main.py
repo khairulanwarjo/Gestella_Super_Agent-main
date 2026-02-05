@@ -181,12 +181,7 @@ async def run_agent(chat_id, user_text, context):
 
         final_response = messages[-1].content
         
-        # Cleanup: If response is short, check history (Vacuum Logic)
-        if len(final_response) < 500:
-            for msg in reversed(messages):
-                if not isinstance(msg, HumanMessage) and len(msg.content) > 500:
-                    final_response = msg.content
-                    break
+
         
         return final_response
 
